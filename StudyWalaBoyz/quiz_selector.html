@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyWalaBoyz - Select Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Ubuntu', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      background: linear-gradient(to right, #fdd835, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 10px rgba(255,255,255,0.2);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #fdd835;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      margin: 10px 0;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    .back-home {
+      margin-top: 20px;
+    }
+
+    .back-home a {
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .back-home a:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Subject for Quiz</h1>
+    <h2>Choose your subject:</h2>
+
+    <!-- Buttons -->
+    <a href="quiz.html?subject=physics" class="button">📘 Physics Quiz</a><br>
+    <a href="quiz.html?subject=chemistry" class="button">⚗️ Chemistry Quiz</a><br>
+    <a href="quiz.html?subject=biology" class="button">🧬 Biology Quiz</a>
+  </div>
+
+  <div class="back-home">
+    <a href="index.html">⬅️ Back to Home</a>
+  </div>
+</body>
+</html>
