@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyWalaBoyz - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Top Banner Ad Bar */
+    .top-banner {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #00b300;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      z-index: 999;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-banner .check-now {
+      background-color: white;
+      color: #00b300;
+      padding: 5px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .top-banner .check-now:hover {
+      background-color: #e6ffe6;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      padding-top: 60px; /* Offset for top banner */
+      font-family: 'Ubuntu', sans-serif;
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 50%;
+      margin-left: 60px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      background: linear-gradient(to right, #fdd835, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 10px rgba(255,255,255,0.3);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #fdd835;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .arrow {
+      margin-left: 5px;
+    }
+
+    .search-box {
+      margin: 20px 0;
+    }
+
+    .search-box input {
+      padding: 8px;
+      width: 60%;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .search-box button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #00f2fe;
+      color: #fff;
+      font-weight: bold;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .welcome {
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Login Box */
+    .login-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      margin-right: 60px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      width: 300px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .login-box h3 {
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00f2fe;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background-color: #4facfe;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner Ad -->
+  <div class="top-banner">
+    <span>📢 Online LIVE school tuitions for Academic year 2024 - 25</span>
+    <a href="#" class="check-now">Check now</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>StudyWalaBoyz</h1>
+    <h2>Class 11 & 12 Notes</h2>
+
+    <a href="physics.html" class="button">📘 Class 11 Physics <span class="arrow">➡️</span></a><br>
+    <a href="chemistry.html" class="button">⚗️ Class 11 Chemistry <span class="arrow">➡️</span></a><br>
+    <a href="biology.html" class="button">🧬 Class 11 Biology <span class="arrow">➡️</span></a><br>
+    <a href="quiz_selector.html" class="button">🎯 Start Quiz <span class="arrow">➡️</span></a>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search Chapter...">
+      <button onclick="searchChapter()">Search</button>
+    </div>
+
+    <div class="welcome">
+      <h3>Welcome Toppers!</h3>
+      <p>Yahan milega free Notes</p>
+    </div>
+
+    <footer>© 2025 StudyWalaBoyz</footer>
+  </div>
+
+  <!-- Login Box -->
+  <div class="login-box">
+    <h3>Login</h3>
+    <form id="loginForm" method="POST" action="/login">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function searchChapter() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      if (query.includes("physics")) {
+        window.location.href = "physics.html";
+      } else if (query.includes("chemistry")) {
+        window.location.href = "chemistry.html";
+      } else if (query.includes("biology") || query.includes("bio")) {
+        window.location.href = "biology.html";
+      } else if (query.includes("quiz") || query.includes("mcq")) {
+        window.location.href = "quiz_selector.html";
+      } else {
+        alert("Chapter not found!");
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyWalaBoyz - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding-top: 65px;
+      font-family: 'Ubuntu', sans-serif;
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .custom-ad-banner {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: transparent;
+      z-index: 999;
+      text-align: center;
+    }
+
+    .custom-ad-banner img {
+      width: 100%;
+      max-height: 60px;
+      object-fit: cover;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: #ffffffcc;
+      border: none;
+      border-radius: 50%;
+      font-size: 16px;
+      padding: 2px 8px;
+      cursor: pointer;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 50%;
+      margin-left: 60px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      background: linear-gradient(to right, #fdd835, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 10px rgba(255,255,255,0.3);
+    }
+
+
+
+
+
